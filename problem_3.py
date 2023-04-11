@@ -34,3 +34,70 @@ def float_division(a,b):
     c=a+b
     return c
 print("Float division:",float_division(a,b))
+
+"""
+conversion
+"""
+
+a=float(input("Enter distance in Kilometers: "))
+def centimeters(a):
+    conversion=a*100000
+    return conversion
+print(centimeters(a),"cm")
+def km_meter(a):
+    conversion=a*1000
+    return conversion
+print(km_meter(a),"meters")
+b=float(input("Enter the weight of oil in Kilograms: "))
+def kg_gram(b):
+    conversion=b*1000
+    return conversion
+print(kg_gram(b),"grams")
+def kg_litre(b):
+    conversion=b*1.1364
+    return conversion
+print(kg_litre(b),"litres")
+g=float(input("Enter the time in hour: "))
+def t_min(g):
+    conversion=g*60
+    return conversion
+print(t_min(g),"minutes")
+def t_sec(g):
+    conversion=g*3600
+    return conversion
+print(t_sec(g),"seconds")
+
+"""
+Earthquake impact
+"""
+
+magnitude = float(input("Enter magnitude of Earthquake: "))
+def Earthquake_Impact(magnitude):
+    if magnitude<2:
+        return "Micro Earthquake"
+    elif 2<=magnitude<3:
+        return "Very Minor Earthquake"
+    elif 3<=magnitude<4:
+        return "Minor Earthquake"
+    elif 4<=magnitude<5:
+        return "Light Earthquake"
+    elif 5<=magnitude<6:
+        return "Moderate Earthquake"
+    elif 6<=magnitude<7:
+        return "Strong Earthquake"
+    elif 7<=magnitude<8:
+        return "Major Earthquake"
+    else:
+        return "Great Earthquake"
+print(Earthquake_Impact(magnitude))
+
+"""
+wind
+"""
+
+T=float(input("Enter temperature in °C: "))
+w=float(input("Enter wind speed in Km/h: "))
+def temp_wind(T,w):
+    output= 13.12 + 0.6215*T - 11.37*(w**0.16) + 0.3965*T*(w**0.16) 
+    return round(output,2)
+print(temp_wind(T,w),"°C")
