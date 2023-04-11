@@ -18,3 +18,36 @@ def discount(a,b):
         r=a-s
         return(r)
 print(discount(a,b)
+
+"""
+In few chit-chat programs, there is a limitation on the number of letters that you can send to your family and friends.
+Write a function that takes as input the,
+message and checks whether the number of letters is less than 200 or above. If the length of the information is less than 200, the chat should be returned.
+If the length of the chat is greater than 200, data consisting of only the first 200 characters should be returned.
+"""
+
+a=input()
+def chat(a):
+    if len(a)<=200:
+        return a
+    else:
+        b=a[:200]
+        return b
+print(chat(a)
+
+"""
+(b) How one can check if the restriction is on a number of words rather than letters? Write a function that allows a message with only 30 words
+"""
+
+def length(msg):
+    if len(msg) <= 200:
+        return msg
+    else:
+        return msg[:200]
+print(msg_length(''))
+def msg_word_count(msg):
+    words = msg.split()
+    if len(words) <= 30:
+        return msg
+    else:
+        return "Message should not contain more than 30 words."
